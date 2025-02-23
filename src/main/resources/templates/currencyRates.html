@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курси валют</title>
+</head>
+<body>
+<h1>Курси валют на сьогодні</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Назва валюти</th>
+        <th>Курс</th>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="rate : ${rates}">
+        <tr>
+            <td th:text="${rate.currencyCode}"></td>
+            <td th:text="${rate.exchangeRate}"></td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+</body>
+</html>
